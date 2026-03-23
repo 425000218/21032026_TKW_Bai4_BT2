@@ -1,0 +1,559 @@
+﻿/* Reset box-sizing cho tất cả phần tử */
+* {
+    box-sizing: border-box;
+}
+/* Style cho body */
+body {
+    margin: 0; /* Loại bỏ margin mặc định */
+    font-family: Arial, Helvetica, sans-serif; /* Font chữ sans-serif */
+    background-color: #f1f5f9; /* Màu nền xám nhạt */
+    color: #1f2937; /* Màu chữ tối */
+}
+/* Style cho header */
+.site-header {
+    background-color: #4a5568; /* Màu nền xám đậm */
+    color: #fff; /* Màu chữ trắng */
+    text-align: center; /* Căn giữa text */
+    padding: 50px 20px; /* Padding trên dưới và trái phải */
+}
+/* Style cho h1 trong header */
+.site-header h1 {
+    margin: 0 0 15px; /* Margin dưới */
+    font-size: clamp(1.75rem, 2.5vw, 3rem); /* Kích thước font responsive */
+}
+/* Style cho p trong header */
+.site-header p {
+    margin: 0; /* Loại bỏ margin */
+    font-size: 1.1rem; /* Kích thước font */
+    max-width: 750px; /* Chiều rộng tối đa */
+    margin-left: auto; /* Căn giữa ngang */
+    margin-right: auto; /* Căn giữa ngang */
+}
+/* Style cho section our-team */
+.our-team {
+    padding: 40px 20px; /* Padding trên dưới và trái phải */
+    text-align: center; /* Căn giữa text */
+}
+/* Style cho h2 trong our-team */
+.our-team h2 {
+    margin: 0 0 24px; /* Margin dưới */
+    font-size: 2rem; /* Kích thước font */
+}
+/* Style cho danh sách team */
+.team-list {
+    display: flex; /* Sử dụng Flexbox */
+    flex-wrap: wrap; /* Cho phép wrap xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các item */
+    justify-content: center; /* Căn giữa các item */
+}
+/* Style cho card thành viên */
+.team-card {
+    background-color: #fff; /* Màu nền trắng */
+    border: 1px solid #e2e8f0; /* Viền nhẹ */
+    border-radius: 12px; /* Bo góc */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* Bóng đổ nhẹ */
+    overflow: hidden; /* Ẩn phần tràn */
+    max-width: 360px; /* Chiều rộng tối đa */
+    flex: 1 1 calc(33.33% - 20px); /* Flex grow/shrink/basis cho 3 cột */
+    min-width: 250px; /* Chiều rộng tối thiểu */
+}
+/* Style cho ảnh trong card */
+.team-card img {
+    width: 100%; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+}
+/* Style cho h3 trong card */
+.team-card h3 {
+    margin: 16px; /* Margin xung quanh */
+    font-size: 1.2rem; /* Kích thước font */
+}
+/* Media query cho tablet */
+@media (max-width: 900px) {
+    .team-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cột trên tablet */
+    }
+}
+/* Media query cho mobile */
+@media (max-width: 640px) {
+    .team-card {
+        flex: 1 1 100%; /* 1 cột trên mobile */
+    }
+}
+
+
+/*BT2.HTML*/
+/* Header/Logo Title */
+.header {
+    padding: 60px; /* Padding */
+    text-align: center; /* Căn giữa text */
+    background: #4670e2; /* Nền xanh */
+    color: rgb(31, 30, 32); /* Màu chữ */
+    font-size: 30px; /* Kích thước font */
+}
+
+/* Content section */
+.content {
+    padding: 20px; /* Padding */
+    margin: 20px 0; /* Margin trên dưới */
+    background-color: #ffffff; /* Nền trắng */
+    border-left: 4px solid #4670e2; /* Viền trái xanh */
+    border-radius: 4px; /* Bo góc nhẹ */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Bóng đổ nhẹ */
+}
+
+/* Heading trong content */
+.content h1 {
+    margin-top: 0; /* Không margin trên */
+    color: #4670e2; /* Màu xanh */
+}
+
+/* Paragraph trong content */
+.content p {
+    line-height: 1.6; /* Chiều cao dòng */
+    color: #333; /* Màu chữ */
+}
+
+/* Navbar - sử dụng Flexbox để hiển thị link ngang hàng */
+.navbar {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #333; /* Nền màu tối */
+    padding: 0; /* Không có padding */
+    margin: 0; /* Không có margin */
+    flex-wrap: wrap; /* Cho phép wrap nếu cần */
+}
+
+/* Style cho các link trong navbar */
+.navbar a {
+    color: white; /* Màu chữ trắng */
+    text-align: center; /* Căn giữa text */
+    padding: 12px 20px; /* Padding */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    font-size: 17px; /* Kích thước font */
+    transition: background-color 0.3s ease; /* Hiệu ứng transition */
+}
+
+/* Hover effect cho link */
+.navbar a:hover {
+    background-color: #ddd; /* Nền khi hover */
+    color: black; /* Chữ đen khi hover */
+}
+
+/* Link bên phải - dùng margin-left: auto để đẩy sang phải */
+.navbar a.right {
+    margin-left: auto; /* Đẩy sang phải */
+}
+
+/* Row - chứa sidebar và main content */
+.row {
+    display: flex; /* Sử dụng Flexbox */
+    flex-wrap: wrap; /* Cho phép wrap */
+    min-height: 400px; /* Chiều cao tối thiểu */
+}
+
+/* Sidebar - chiếm 25% chiều rộng */
+.side {
+    flex: 25%; /* 25% chiều rộng */
+    background-color: #f1f1f1; /* Nền xám nhạt */
+    padding: 20px; /* Padding */
+}
+
+/* Main content - chiếm 75% chiều rộng */
+.main {
+    flex: 75%; /* 75% chiều rộng */
+    background-color: white; /* Nền trắng */
+    padding: 20px; /* Padding */
+}
+
+/* Footer */
+.footer {
+    padding: 20px; /* Padding */
+    text-align: center; /* Căn giữa text */
+    background-color: #4670e2; /* Nền xanh như header */
+    color: white; /* Chữ trắng */
+}
+
+/* Responsive - trên mobile, sidebar và main chiếm 100% chiều rộng */
+@media (max-width: 768px) {
+    .side {
+        flex: 100%; /* 100% chiều rộng */
+    }
+
+    .main {
+        flex: 100%; /* 100% chiều rộng */
+    }
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+
+
+
+
+
+
+
+/*BT3.html*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+	padding: 80px;
+	text-align: center; 
+	background: #1abc9c;
+	color: white;  
+}
+.header h1 {
+  font-size: 40px;
+}
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+.footer {
+  padding: 20px; /* Some padding */
+  text-align: center; /* Center text*/
+  background: #ddd; /* Grey background */
+}
+
+/*=== BT4.HTML - RESPONSIVE WEBSITE ===*/
+
+/* CSS Variables cho màu sắc */
+:root {
+    --color-teal: #17a2b8; /* Xanh teal cho header */
+    --color-dark: #333333; /* Đen/xám đậm cho nav */
+    --color-light-gray: #f5f5f5; /* Xám nhạt cho footer */
+    --color-white: #ffffff; /* Trắng */
+    --color-text: #333333; /* Chữ đen */
+}
+
+/* Navigation bar chính - điều hướng giữa bài tập */
+.navbar-main {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #222222; /* Nền rất tối */
+    padding: 0; /* Không padding */
+    margin: 0; /* Không margin */
+    flex-wrap: wrap; /* Cho phép wrap */
+}
+
+/* Link trong navbar chính */
+.navbar-main a {
+    color: var(--color-white); /* Chữ trắng */
+    text-align: center; /* Căn giữa */
+    padding: 12px 18px; /* Padding */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    font-size: 15px; /* Kích thước chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng transition */
+}
+
+/* Hover effect cho navbar chính */
+.navbar-main a:hover {
+    background-color: var(--color-teal); /* Nền xanh teal */
+    color: var(--color-white); /* Chữ trắng */
+}
+
+/* Header BT4 */
+.header-bt4 {
+    background-color: var(--color-teal); /* Xanh teal */
+    color: var(--color-white); /* Chữ trắng */
+    text-align: center; /* Căn giữa */
+    padding: 60px 20px; /* Padding lớn */
+}
+
+/* Heading trong header BT4 */
+.header-bt4 h1 {
+    margin: 0; /* Không margin */
+    font-size: 2.5rem; /* Kích thước font lớn */
+}
+
+/* Paragraph trong header BT4 */
+.header-bt4 p {
+    margin: 10px 0 0 0; /* Margin nhỏ */
+    font-size: 1.1rem; /* Kích thước chữ */
+}
+
+/* Menu Navigation */
+.nav-menu {
+    display: flex; /* Sử dụng Flexbox */
+    background-color: var(--color-dark); /* Nền đen/xám đậm */
+    padding: 0; /* Không padding */
+    margin: 0; /* Không margin */
+    flex-wrap: wrap; /* Cho phép wrap */
+}
+
+/* Link trong menu navigation */
+.nav-menu a {
+    color: var(--color-white); /* Chữ trắng */
+    text-align: center; /* Căn giữa */
+    padding: 14px 20px; /* Padding */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    font-size: 16px; /* Kích thước chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng transition */
+}
+
+/* Hover effect menu */
+.nav-menu a:hover {
+    background-color: var(--color-teal); /* Nền xanh teal */
+}
+
+/* Link bên phải - sử dụng margin-left: auto */
+.nav-menu a.nav-right {
+    margin-left: auto; /* Đẩy sang phải */
+}
+
+/* Container chính cho layout 2 cột */
+.container-bt4 {
+    display: flex; /* Sử dụng Flexbox */
+    flex-wrap: wrap; /* Cho phép wrap */
+    max-width: 1200px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+}
+
+/* Sidebar BT4 - 30% chiều rộng */
+.sidebar-bt4 {
+    flex: 30%; /* 30% chiều rộng */
+    background-color: var(--color-light-gray); /* Nền xám nhạt */
+    padding: 20px; /* Padding */
+    min-width: 250px; /* Chiều rộng tối thiểu */
+    order: -1; /* Đặt sidebar bên trái */
+}
+
+/* Heading trong sidebar */
+.sidebar-bt4 h2 {
+    margin-top: 0; /* Không margin trên */
+    color: var(--color-text); /* Chữ đen */
+}
+
+/* Heading 3 trong sidebar */
+.sidebar-bt4 h3 {
+    margin-top: 30px; /* Margin trên */
+    color: var(--color-text); /* Chữ đen */
+}
+
+/* Ảnh lớn trong sidebar */
+.sidebar-img {
+    width: 100%; /* 100% chiều rộng */
+    margin-bottom: 20px; /* Margin dưới */
+}
+
+/* Ảnh trong sidebar */
+.sidebar-img img {
+    width: 100%; /* 100% chiều rộng */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 5px; /* Bo góc */
+    display: block; /* Loại bỏ khoảng trắng */
+}
+
+/* Section "More Text" với ảnh nhỏ */
+.more-section {
+    display: flex; /* Sử dụng Flexbox */
+    gap: 10px; /* Khoảng cách */
+    flex-wrap: wrap; /* Cho phép wrap */
+}
+
+/* Ảnh nhỏ trong more section */
+.img-small {
+    flex: 1; /* Chia đều */
+    min-width: 100px; /* Chiều rộng tối thiểu */
+}
+
+/* Ảnh nhỏ image tag */
+.img-small img {
+    width: 100%; /* 100% chiều rộng */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 5px; /* Bo góc */
+    display: block; /* Loại bỏ khoảng trắng */
+}
+
+/* Main content BT4 - 70% chiều rộng */
+.main-content-bt4 {
+    flex: 70%; /* 70% chiều rộng */
+    background-color: var(--color-white); /* Nền trắng */
+    padding: 20px; /* Padding */
+    order: 1; /* Đặt bên phải */
+}
+
+/* Article BT4 */
+.article-bt4 {
+    margin-bottom: 40px; /* Margin dưới */
+    padding-bottom: 40px; /* Padding dưới */
+    border-bottom: 1px solid #ddd; /* Viền dưới */
+}
+
+/* Heading 2 trong article */
+.article-bt4 h2 {
+    margin-top: 0; /* Không margin trên */
+    color: var(--color-text); /* Chữ đen */
+    font-size: 1.8rem; /* Kích thước font */
+}
+
+/* Ngày tháng trong article */
+.article-date {
+    color: #666; /* Chữ xám */
+    font-size: 0.9rem; /* Kích thước chữ nhỏ */
+    margin: 10px 0 20px 0; /* Margin */
+}
+
+/* Ảnh trong article */
+.article-img {
+    width: 100%; /* 100% chiều rộng */
+    margin: 20px 0; /* Margin */
+}
+
+/* Image tag trong article */
+.article-img img {
+    width: 100%; /* 100% chiều rộng */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 5px; /* Bo góc */
+    display: block; /* Loại bỏ khoảng trắng */
+}
+
+/* Paragraph trong article */
+.article-bt4 p {
+    line-height: 1.6; /* Chiều cao dòng */
+    color: var(--color-text); /* Chữ đen */
+    font-size: 1rem; /* Kích thước chữ */
+}
+
+/* Footer BT4 */
+.footer-bt4 {
+    background-color: var(--color-light-gray); /* Xám nhạt */
+    color: var(--color-text); /* Chữ đen */
+    text-align: center; /* Căn giữa */
+    padding: 30px 20px; /* Padding */
+    margin-top: 40px; /* Margin trên */
+    border-top: 1px solid #ddd; /* Viền trên */
+}
+
+/* Heading trong footer */
+.footer-bt4 p {
+    margin: 10px 0; /* Margin */
+    font-size: 0.95rem; /* Kích thước chữ */
+}
+
+/* Link trong footer */
+.footer-bt4 a {
+    color: var(--color-teal); /* Chữ xanh teal */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    margin: 0 5px; /* Margin */
+    transition: color 0.3s ease; /* Hiệu ứng transition */
+}
+
+/* Hover effect footer */
+.footer-bt4 a:hover {
+    color: var(--color-dark); /* Chữ đen */
+    text-decoration: underline; /* Gạch chân */
+}
+
+/* Responsive cho BT4 - Tablet (900px trở xuống) */
+@media (max-width: 900px) {
+    .sidebar-bt4 {
+        flex: 100%; /* 100% chiều rộng */
+        order: 2; /* Đặt dưới main content */
+    }
+
+    .main-content-bt4 {
+        flex: 100%; /* 100% chiều rộng */
+        order: 1; /* Đặt trên sidebar */
+    }
+
+    .nav-menu a.nav-right {
+        margin-left: 0; /* Reset margin */
+        display: none; /* Ẩn link bên phải */
+    }
+}
+
+/* Responsive cho BT4 - Mobile (640px trở xuống) */
+@media (max-width: 640px) {
+    .container-bt4 {
+        flex-direction: column; /* Stack dọc */
+    }
+
+    .sidebar-bt4 {
+        flex: 100%; /* 100% chiều rộng */
+        order: 2; /* Đặt dưới */
+    }
+
+    .main-content-bt4 {
+        flex: 100%; /* 100% chiều rộng */
+        order: 1; /* Đặt trên */
+    }
+
+    .header-bt4 h1 {
+        font-size: 1.8rem; /* Font size nhỏ hơn */
+    }
+
+    .header-bt4 p {
+        font-size: 1rem; /* Font size nhỏ hơn */
+    }
+
+    .navbar-main,
+    .nav-menu {
+        flex-direction: column; /* Stack dọc */
+    }
+
+    .nav-menu a.nav-right {
+        display: none; /* Ẩn link bên phải */
+    }
+
+    .article-bt4 h2 {
+        font-size: 1.4rem; /* Font size nhỏ hơn */
+    }
+
+    .more-section {
+        flex-direction: column; /* Stack dọc */
+    }
+
+    .img-small {
+        flex: 100%; /* 100% chiều rộng */
+    }
+}
